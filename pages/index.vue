@@ -7,7 +7,9 @@
       <div>
         <h1 class="title">Choose your dream destination...</h1>
         <div class="links">
-          <a href="#" class="giant-button"> San Francisco, USA </a>
+          <a href="#" class="giant-button" @click="getDestinations()">
+            San Francisco, USA
+          </a>
           <a href="#" class="giant-button"> Québec, Canada </a>
           <a href="#" class="giant-button"> Bora Bora, Polynésie </a>
           <a href="#" class="giant-button"> Torres del Paine, Chile </a>
@@ -18,7 +20,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    getDestinations() {
+      // eslint-disable-next-line no-console
+      this.getDestination()
+    },
+  },
+}
 </script>
 
 <style lang="scss">
